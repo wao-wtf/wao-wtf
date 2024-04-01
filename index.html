@@ -17,22 +17,22 @@
     body {
       background: linear-gradient(125deg, #FFBC42, #80C06E, #00C399, #18867A, #2F495A);
       font-family: 'Nunito', sans-serif;
-      display: flex; 
-      flex-direction: column; 
-      align-items: center; 
-      justify-content: center; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 20px; /* Added padding for a little space on small screens */
+      padding: 20px;
     }
     a, body {
       color: #fff;
     }
     aside {
-      font-size: 5em; /* Adjusted for better scaling */
+      font-size: 5em; /* Smaller size for mobile */
     }
     main {
-      max-width: 90%; /* Ensure main content does not stretch too wide on larger screens */
-      margin: 20px; /* Add some margin around the main content */
+      max-width: 90%;
+      margin: 20px;
     }
     h1 {
       font-family: 'Roboto Slab', sans-serif;
@@ -42,21 +42,37 @@
       font-size: 1em; /* Ensure text scales well */
     }
 
-    /* Responsive adjustments */
+    /* Responsive adjustments for tablets and desktops */
     @media (min-width: 768px) {
       body {
-        flex-direction: row; 
-        text-align: left; /* Text aligned to left for wider screens */
-        justify-content: center; /* Center content horizontally */
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
       }
       aside {
-        font-size: 8em; /* Larger emoji on wider screens */
+        font-size: 8em; /* Bigger emoji for larger screens */
       }
       main {
-        max-width: 600px; /* Limiting main content width for readability */
+        max-width: 600px; /* Limiting main content width for readability on tablets */
+      }
+      h1, p, a {
+        font-size: 1.25em; /* Slightly larger text for readability on tablets */
+      }
+    }
+    
+    /* Adjustments for larger desktop screens */
+    @media (min-width: 1024px) {
+      main {
+        max-width: 800px; /* Increased content width for desktops */
       }
       h1 {
-        font-size: 2.5em; /* Slightly larger heading on wider screens */
+        font-size: 3em; /* Larger headings for desktops */
+      }
+      p, a {
+        font-size: 1.5em; /* Larger text for better readability on desktops */
+      }
+      aside {
+        font-size: 10em; /* Adjusting emoji size for a balanced look on larger screens */
       }
     }
   </style>
